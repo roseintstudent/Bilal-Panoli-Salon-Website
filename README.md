@@ -1,8 +1,8 @@
 # Bilal Panoli Salon — Website Project
 
 ## Student Information
-- **Name:** [Your Full Name]
-- **Student Number:** [Your Student Number]
+- **Name:** Iqbal Sirkhot
+- **Student Number:** st10514804
 - **Module:** Web Development (Introduction) — WEDE5020
 - **Assessment:** Portfolio of Evidence (PoE)
 
@@ -96,3 +96,11 @@ HTML structure.
   white and gold theme specified for the brand
 
 ## File and Folder Structure
+## References
+Ahmed, W. and Sathish, M. (2021) *The Complete Web Developer Course*. 2nd edn. Birmingham: Packt Publishing.
+
+Krug, S. (2020) *Don't Make Me Think, Revisited: A Common Sense Approach to Web and Mobile Usability*. 3rd edn. San Francisco: New Riders.
+
+Moran, K. (2022) 'Responsive, Adaptive and Fluid Layouts', *Nielsen Norman Group*. Available at: https://www.nngroup.com/articles/responsive-adaptive-fluid/ (Accessed: 28 July 2026).
+
+W3Schools (2024) *HTML and CSS Web Design Reference*. Available at: https://www.w3schools.com (Accessed: [date accessed]).
