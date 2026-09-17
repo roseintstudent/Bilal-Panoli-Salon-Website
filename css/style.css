@@ -1,0 +1,549 @@
+/* ==========================================================
+   Bilal Panoli Salon — Stylesheet
+   Part 2: CSS Styling for Desktop Solution & Responsive Design
+   Colour scheme: White & Gold
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1. CSS Reset / Base Styles
+   ---------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2b2b2b;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ----------------------------------------------------------
+   2. Colour Variables (white / gold theme)
+   ---------------------------------------------------------- */
+:root {
+    --white: #ffffff;
+    --off-white: #faf8f4;
+    --gold: #c8a24a;
+    --gold-light: #e8d8ae;
+    --gold-dark: #a8842f;
+    --text-dark: #2b2b2b;
+    --border-light: #e8e2d4;
+}
+
+/* ----------------------------------------------------------
+   3. Typography
+   ---------------------------------------------------------- */
+h1, h2, h3, h4 {
+    font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--gold);
+    margin-top: 0.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--gold-dark);
+}
+
+h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
+
+/* ----------------------------------------------------------
+   4. Header & Navigation
+   ---------------------------------------------------------- */
+header {
+    background-color: var(--white);
+    color: var(--text-dark);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--gold);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+header .logo h1 {
+    color: var(--gold-dark);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--gold-dark);
+    border-bottom-color: var(--gold);
+}
+
+nav a:active {
+    color: var(--gold-dark);
+}
+
+/* ----------------------------------------------------------
+   5. Main Layout
+   ---------------------------------------------------------- */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Hero section (index.html) */
+.hero {
+    position: relative;
+    margin: -2rem -1.5rem 3rem -1.5rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+    color: var(--white);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.hero-text h2 {
+    color: var(--white);
+}
+
+.hero-text h2::after {
+    background-color: var(--gold);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Highlights list */
+.highlights ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.highlights li {
+    background-color: var(--off-white);
+    border-left: 4px solid var(--gold);
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Mission & Vision / Team grids */
+.mission-vision,
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.mission-vision article,
+.team-member {
+    background-color: var(--off-white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-light);
+}
+
+.team-member img {
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    border: 2px solid var(--gold);
+}
+
+/* ----------------------------------------------------------
+   6. Buttons / Calls to Action
+   ---------------------------------------------------------- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--white);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border: 2px solid var(--gold);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: var(--white);
+    color: var(--gold-dark);
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.cta-button.secondary {
+    background-color: var(--white);
+    color: var(--text-dark);
+    border-color: var(--text-dark);
+}
+
+.cta-button.secondary:hover,
+.cta-button.secondary:focus {
+    background-color: var(--text-dark);
+    color: var(--white);
+    border-color: var(--text-dark);
+}
+
+.cta-section {
+    text-align: center;
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    padding: 2.5rem 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--gold-light);
+}
+
+.cta-section h2::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ----------------------------------------------------------
+   7. Services Page — Tables & Gallery
+   ---------------------------------------------------------- */
+.service-category {
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border: 1px solid var(--border-light);
+}
+
+thead {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+th, td {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+tbody tr:hover {
+    background-color: var(--off-white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+}
+
+.gallery-grid img {
+    border-radius: 4px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid var(--border-light);
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.gallery-grid img:hover {
+    opacity: 0.85;
+    border-color: var(--gold);
+}
+
+/* ----------------------------------------------------------
+   8. Forms (enquiry.html & contact.html)
+   ---------------------------------------------------------- */
+form {
+    background-color: var(--off-white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-light);
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(200, 162, 74, 0.25);
+}
+
+button[type="submit"] {
+    background-color: var(--gold);
+    color: var(--white);
+    font-weight: 700;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: var(--gold-dark);
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* ----------------------------------------------------------
+   9. Contact Page — Details & Maps
+   ---------------------------------------------------------- */
+.contact-details ul {
+    margin-bottom: 1.5rem;
+}
+
+.contact-details li {
+    padding: 0.25rem 0;
+}
+
+.locations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--border-light);
+}
+
+/* ----------------------------------------------------------
+   10. Footer
+   ---------------------------------------------------------- */
+footer {
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 3px solid var(--gold);
+}
+
+footer a {
+    color: var(--gold-dark);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--text-dark);
+}
+
+/* ==========================================================
+   11. Responsive Design — Breakpoints
+   Desktop-first: base styles above target desktop screens.
+   Tablet breakpoint: max-width 768px
+   Mobile breakpoint:  max-width 480px
+   ========================================================== */
+
+/* ---------- Tablet (<= 768px) ---------- */
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero {
+        margin: -1.5rem -1rem 2rem -1rem;
+    }
+
+    .hero img {
+        height: 45vh;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .mission-vision,
+    .team,
+    .locations {
+        grid-template-columns: 1fr;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 0.75rem;
+        border: 1px solid var(--border-light);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    td {
+        border-bottom: none;
+        padding: 0.5rem 1rem;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--gold-dark);
+        display: inline-block;
+        width: 45%;
+    }
+}
+
+/* ---------- Mobile (<= 480px) ---------- */
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 0.95rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .cta-button {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .hero img {
+        height: 35vh;
+    }
+
+    .hero-text {
+        padding: 1.25rem 1rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+}
