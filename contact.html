@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Bilal Panoli Salon</title>
     <meta name="description" content="Get in touch with Bilal Panoli Salon by phone, WhatsApp or the contact form. Find our location on the map.">
+    <meta name="keywords" content="contact barbershop, Bilal Panoli Salon location, barbershop opening hours, barbershop near me">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Leaflet.js: free, open-source interactive maps (no API key needed) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 </head>
 <body>
 
-    <!-- ===== Site Header & Navigation ===== -->
     <header>
         <div class="logo">
             <h1>Bilal Panoli Salon</h1>
@@ -29,7 +33,6 @@
 
         <h2>Contact Us</h2>
 
-        <!-- Basic contact details -->
         <section class="contact-details">
             <h3>Get in Touch</h3>
             <ul>
@@ -46,32 +49,27 @@
             </ul>
         </section>
 
-        <!-- Two locations shown on embedded maps, as required by the brief -->
+        <!-- Two interactive locations, built with Leaflet.js in Part 3
+             (replaces the static Google Maps iframes from Part 1) -->
         <section class="locations">
             <h3>Find Us</h3>
             <div class="map-container">
                 <h4>Main Branch &ndash; City Centre</h4>
-                <iframe
-                    title="Bilal Panoli Salon main branch location map"
-                    src="https://www.google.com/maps?q=City+Centre&output=embed"
-                    width="100%" height="300" style="border:0;" loading="lazy">
-                </iframe>
+                <div id="map-main" role="application" aria-label="Map showing the main branch location"></div>
             </div>
             <div class="map-container">
                 <h4>Second Branch &ndash; Suburb Mall</h4>
-                <iframe
-                    title="Bilal Panoli Salon second branch location map"
-                    src="https://www.google.com/maps?q=Suburb+Mall&output=embed"
-                    width="100%" height="300" style="border:0;" loading="lazy">
-                </iframe>
+                <div id="map-second" role="application" aria-label="Map showing the second branch location"></div>
             </div>
+            
         </section>
 
-        <!-- General contact form. JavaScript validation and email
-             processing will be added in Part 3. -->
+        <!-- General contact form. Validated by js/script.js (Part 3),
+             which also compiles the message into an email for the
+             visitor to send via their own email app. -->
         <section class="contact-form">
             <h3>Send Us a Message</h3>
-            <form action="#" method="post" id="contact-form">
+            <form action="#" method="post" id="contact-form" novalidate>
 
                 <div class="form-group">
                     <label for="c-full-name">Full Name</label>
@@ -111,7 +109,6 @@
 
     </main>
 
-    <!-- ===== Site Footer ===== -->
     <footer>
         <p>&copy; 2026 Bilal Panoli Salon. All rights reserved.</p>
         <p>
@@ -120,6 +117,6 @@
         </p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
