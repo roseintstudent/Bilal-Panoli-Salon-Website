@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Bilal Panoli Salon</title>
     <meta name="description" content="Learn about Bilal Panoli Salon's history, mission and the barbers behind the chair.">
+    <meta name="keywords" content="about Bilal Panoli Salon, barbershop history, our barbers, local barbershop">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ===== Site Header & Navigation ===== -->
     <header>
         <div class="logo">
             <h1>Bilal Panoli Salon</h1>
@@ -27,7 +27,6 @@
 
     <main>
 
-        <!-- Our story -->
         <section class="our-story">
             <h2>Our Story</h2>
             <p>
@@ -38,7 +37,6 @@
             </p>
         </section>
 
-        <!-- Mission and vision -->
         <section class="mission-vision">
             <h2>Mission &amp; Vision</h2>
             <article>
@@ -51,22 +49,20 @@
             </article>
         </section>
 
-        <!-- Meet the team -->
         <section class="team">
             <h2>Meet the Team</h2>
             <div class="team-member">
-                <img src="images/barber-1.jpg" alt="Head barber Bilal Panoli standing in the shop" width="400">
+                <img src="images/barber-1.jpg" alt="Head barber Bilal Panoli standing in the shop" loading="lazy">
                 <h3>Bilal Panoli</h3>
                 <p>Owner &amp; Head Barber &mdash; over 12 years of experience in traditional and modern cuts.</p>
             </div>
             <div class="team-member">
-                <img src="images/barber-2.jpg" alt="Second barber at Bilal Panoli Salon" width="400">
+                <img src="images/barber-2.jpg" alt="Second barber at Bilal Panoli Salon" loading="lazy">
                 <h3>Junior Barber</h3>
                 <p>Specialist in fades, beard shaping and hot towel shaves.</p>
             </div>
         </section>
 
-        <!-- Who we serve -->
         <section class="audience">
             <h2>Who We Serve</h2>
             <p>
@@ -75,9 +71,50 @@
             </p>
         </section>
 
+        <!-- FAQ accordion: interactive element built in Part 3 with JavaScript -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Do I need to book in advance, or do you take walk-ins?
+                </button>
+                <div class="faq-answer">
+                    <p>Walk-ins are always welcome, but booking online guarantees your slot and avoids any wait, especially on Saturdays.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    What happens if I need to cancel or reschedule?
+                </button>
+                <div class="faq-answer">
+                    <p>Just give us a call or WhatsApp message at least 2 hours before your appointment and we'll happily move it to another time.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Do you cut children's hair?
+                </button>
+                <div class="faq-answer">
+                    <p>Yes — we offer a dedicated kids haircut service for children under 12. See our Services page for pricing.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Is parking available at either branch?
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, both the City Centre and Suburb Mall branches have free customer parking right outside.</p>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
-    <!-- ===== Site Footer ===== -->
     <footer>
         <p>&copy; 2026 Bilal Panoli Salon. All rights reserved.</p>
         <p>
@@ -86,6 +123,6 @@
         </p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
