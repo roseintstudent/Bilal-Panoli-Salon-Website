@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book an Appointment | Bilal Panoli Salon</title>
     <meta name="description" content="Book a haircut, beard trim or shave online at Bilal Panoli Salon. Choose your service, preferred barber, date and time.">
+    <meta name="keywords" content="book haircut, barber appointment, salon booking, barbershop enquiry">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ===== Site Header & Navigation ===== -->
     <header>
         <div class="logo">
             <h1>Bilal Panoli Salon</h1>
@@ -33,10 +33,10 @@
             confirm your appointment and provide details on cost and availability.
         </p>
 
-        <!-- Booking / enquiry form. JavaScript validation and a processed
-             response will be added in Part 3. The action attribute is a
-             placeholder to be pointed at a real endpoint later. -->
-        <form action="#" method="post" id="enquiry-form">
+        <!-- Booking / enquiry form. Validated and processed by js/script.js
+             (Part 3): checks each field, then displays an estimated cost
+             and confirms the requested barber, date and time below. -->
+        <form action="#" method="post" id="enquiry-form" novalidate>
 
             <div class="form-group">
                 <label for="full-name">Full Name</label>
@@ -89,8 +89,8 @@
                 <textarea id="notes" name="notes" rows="4"></textarea>
             </div>
 
-            <!-- Space reserved for a JavaScript-generated response
-                 (e.g. estimated cost / availability) in Part 3 -->
+            <!-- Filled in dynamically by js/script.js once the form is
+                 validated and "processed" -->
             <div id="enquiry-response" aria-live="polite"></div>
 
             <button type="submit">Submit Booking Request</button>
@@ -99,7 +99,6 @@
 
     </main>
 
-    <!-- ===== Site Footer ===== -->
     <footer>
         <p>&copy; 2026 Bilal Panoli Salon. All rights reserved.</p>
         <p>
@@ -108,6 +107,6 @@
         </p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
