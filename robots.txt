@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roseintstudent.github.io/Bilal-Panoli-Salon-Website/sitemap.xml
