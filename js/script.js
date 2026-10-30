@@ -373,17 +373,17 @@ function initLeafletMaps() {
     if (!mainMapEl || !secondMapEl || typeof L === "undefined") return;
 
     // Replace these coordinates with the salon's real branch locations.
-    const mainBranch = { lat: -26.2041, lng: 28.0473, name: "Bilal Panoli Salon — City Centre" };
+     const mainBranch = { lat: -26.2041, lng: 28.0473, name: "Bilal Panoli Salon — City Centre" };
     const secondBranch = { lat: -26.1715, lng: 28.0578, name: "Bilal Panoli Salon — Suburb Mall" };
 
     // CARTO map tiles: free to use and not blocked when opened from a local file
-    const tileUrl = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+        // Esri World Street Map tiles: free, no API key needed
+    const tileUrl = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}";
     const tileOptions = {
-        attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
-        subdomains: "abcd",
+        attribution: "Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, and others",
         maxZoom: 19
     };
-
+    
     const mainMap = L.map("map-main").setView([mainBranch.lat, mainBranch.lng], 15);
     L.tileLayer(tileUrl, tileOptions).addTo(mainMap);
     L.marker([mainBranch.lat, mainBranch.lng]).addTo(mainMap)
