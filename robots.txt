@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://roseintstudent.github.io/Bilal-Panoli-Salon-Website/sitemap.xml
+Sitemap: Sitemap: https://charming-conkies-a30427.netlify.app/sitemap.xml
